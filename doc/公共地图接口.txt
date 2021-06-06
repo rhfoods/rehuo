@@ -1,0 +1,84 @@
+1、获取公共地图所有城市
+  INPUT: {
+    userId: 0
+  }
+  OUTPUT: [
+    {
+      code: 城市对应的code码
+      latlng: 城市对应的经纬度
+      name: 城市名称
+    }
+  ]
+  注：如果用户当前位置所在的城市不在公共地图对应的城市中，则根据当前位置的经纬度找到离他最近的城市，跳转到离他最近的城市。
+2、获取对应城市的分类
+  INPUT: {
+    code:  城市对应的code码
+    userId: 0
+  } 
+  OUTPUT: [
+    {
+      sortId: 分类ID
+      name: 分类名称,
+      logo: 分类LOGO,
+      points: 点位数
+    }
+  ]
+  3、好店推荐
+  INPUT: {
+    token: 推荐者的TOKEN
+    address: 推荐店的地址
+    name: 推荐店的名称
+    latitude: 推荐店的纬度
+    longitude: 推荐店的经度
+    images:[]  推荐店的图片，最多可九张
+  }
+  OUTPUT: {
+    returnCode: SUCCESS | FAILURE
+  }
+  4、获取城市对应分类的点位信息
+  INPUT: {
+    userId: 0,
+    sortId: 分类ID
+  }
+  OUTPUT: [
+    {
+      "psaveId": ,
+      "tag": "string",
+      "longitude": 0,
+      "latitude": 0,
+      "goods": 0,
+      "logo": "string",
+    }
+  ]
+  5、获取公共点位详情页信息
+  INPUT: {
+    userId: 0,
+    psaveId: 点位收藏ID号
+  }
+  OUTPUT:
+  {
+      "psaveId": 0,
+      "longitude": 0,
+      "latitude": 0,
+      "goods": 0,
+      "bads": 0,
+      "saves": 0,
+      "shares":0,
+      "clocks": 0
+  }
+  6、获取公共点位对应的文章列表
+  INPUT: {
+    userId: 0,
+    psaveId: 点位收藏ID号
+  }
+  OUTPUT: [
+    {
+      psaveId: 文章作者对应的点位收藏ID，
+      nickname: 文章作者的昵称，
+      avatarUrl: 文章作者的头像，
+      title: 文章的标题
+      image: 文章对应的第一张图片或者视频
+      likes: 文章被点赞次数
+      userId?: 文章作者ID号，
+    }
+  ]

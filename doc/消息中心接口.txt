@@ -1,0 +1,35 @@
+1、获取系统消息数量
+  INPUT: {
+    token
+  }
+  OUTPUT: {
+      savetops,
+      likes,
+      clocks,
+      comments,
+      systems
+  }
+2、查看收藏与置顶、打卡、评论和点赞信息(注： *表示可选)
+
+  INPUT: {
+    token,
+    type: ['SAVETOPS', 'LIKES', 'CLOCKS', 'COMMENTS']
+    page
+  }
+  OUTPUT: [
+    {
+    type: ['SAVE','TOP','LNOTE', 'LCOMMENT',]
+    userId,
+    nickName,
+    avatarUrl,
+    createdAt,
+    psaveId*,
+    noteId*,
+    title*,
+    medias*: [],
+    goods*,
+    bads*,
+    comment*,
+    commentId*,
+    }
+  ]

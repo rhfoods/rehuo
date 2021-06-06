@@ -1,0 +1,167 @@
+/* 修改头部logo的位置 */
+.navbar-brand{
+    padding: 5px 5px;
+}
+/* 设置logo图片的大小 */
+.navbar-brand>img{
+    height: 40px;
+}
+/* 修改头部header的背景颜色 */
+.navbar-inverse{
+    background-color: #333;
+    border-color: #333;
+}
+/* 修改头部导航文字的颜色 */
+.navbar-inverse .navbar-nav>li>a{
+    color: #fff;
+    font-weight: bolder;
+}
+.navbar-inverse .navbar-nav>li:hover{
+    background: #fff;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+    color: #333;
+}
+/* 修改搜索框边框---> border=0, 去掉box-shadow */
+.form-control{
+    border: 0;
+    box-shadow: inset 0 0px 0px orange;
+}
+.form-control:focus {
+    border-color: #fff;
+    -webkit-box-shadow: inset 0 0px 0px orange, 0 0 0 orange;
+    box-shadow: inset 0 0px 0px orange, 0 0 0 orange;
+}
+/* 将搜索框的按钮的边框颜色 */
+.btn-default {
+    border-color: #fff;
+}
+.btn-default:hover,.btn-default:focus.btn-default:active {
+    background-color: #eee;
+    border-color: #fff;
+}
+
+/* 改变折叠按钮的边框颜色 */
+.navbar-inverse .navbar-toggle {
+    border-color: #fff;
+}
+/* 当hover时, 折叠按钮的背景颜色 */
+.navbar-inverse .navbar-toggle:hover{
+    background-color: #fff;
+}
+.navbar-inverse .navbar-toggle:hover .icon-bar{
+    background-color: #333333;
+}
+/* 改变折叠列表边框的颜色 */
+.navbar-inverse .navbar-collapse,.navbar-inverse .navbar-form {
+    border-color: #fff;
+}
+/* 去掉头部的margin-bottom */
+.navbar{
+    margin-bottom: 0;
+}
+/* 给banner设置图片背景 以及 字体颜色*/
+.jumbotron {
+    background-color: #f2f2f2;
+    background-size: 100% auto;
+    background-position: center center;
+    margin-bottom: 0;
+    color: #333;
+}
+.jumbotron .right>img{
+    max-width: 280px;
+    animation: aaa 2s ease;
+}
+.jumbotron .left{
+    animation: bbb 2s ease;
+}
+.jumbotron h2{
+    font-size: 24px;
+}
+.jumbotron p{
+    font-size: 18px;
+}
+.part01{
+    background-color: #323232;
+    z-index: 1;
+    position: relative;
+}
+.part1{
+    color: #ffffff;
+}
+.part1>p{
+    margin-bottom: 39px;
+    line-height: 2em;
+}
+/* part1 的 card的样式 */
+.part1 .row .card {
+    animation: ccc 2s ease-in-out;
+    max-width: 210px;
+    box-sizing: border-box;
+    padding: 6px;
+    margin: 0 auto 50px auto;
+}
+.part1 .row .card>img{
+    border-radius: 9%;
+}
+.part1 .row .card h3{
+    font-size: 21px;
+}
+.goods {
+    position: relative;
+    opacity: 0;
+    transform: translateY(-300px);
+    transition: all 1s ease-in-out;
+}
+.goods>.title{
+    color: #666;
+    font-weight: bolder;
+    height: 39px;
+    background-color: #f2f2f2;
+    margin-bottom: 27px;
+    margin-top: 27px;
+}
+.goods>.title>h3{
+    font-size: 18px;
+    margin: 9px 0 0 9px;
+}
+.goods>.title>a{
+    color: #666;
+    margin-top: 9px;
+    margin-right: 18px;
+}
+.goods>.row .card{
+    max-width: 240px;
+    border: 1px solid #eee;
+    margin: 0 auto 24px auto;
+
+}
+.goods>.row .card>img{
+    margin: 0 auto;
+}
+.goods>.row .card>h3{
+    font-size: 18px;
+}
+.goods>.row .card>p>span{
+    color: red;
+}
+.goods>.row .card>p>span:nth-child(2){
+    font-size: 21px;
+}
+.footer {
+    background-color: #f2f2f2;
+    padding: 36px 0;
+    color: #999999;
+}
+@keyframes aaa {
+    0% {transform: translateX(300px);opacity: 0;}
+    100% {}
+}
+@keyframes bbb {
+    0% {transform: translateX(-300px);opacity: 0;}
+    100% {}
+}
+@keyframes ccc {
+    0% {transform: translateY(30px);opacity: 0;}
+    100% {}
+}

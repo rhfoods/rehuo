@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>优客来享</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./border.css">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="page" >
+        <div class="pics" >
+            <image class="bg" src="./bg.png"  />
+            <image class="qrcode" src="./qrcode.jpg"  />
+            </image>
+        </div>
+        <div class="h1" >长按或扫描</div>
+        <div class="h2" >识别图中二维码</div>
+        <div class="h3" >即可进入公众号</div>
+
+    </div>
+</body>
+<script>
+    rem()
+    window.onresize = () => rem()
+    function rem () {
+        let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+        if (htmlWidth>750) htmlWidth=750
+        let htmlDom = document.getElementsByTagName('html')[0];
+        htmlDom.style.fontSize= htmlWidth/375*50 + 'px';
+    }
+</script>
+</html>
